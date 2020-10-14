@@ -1,6 +1,6 @@
 package com.cg;
 
-public class LinkedList<K extends Comparable<K>> {
+public class LinkedList<K> {
 	INode<K> head;
 	INode<K> tail;
 
@@ -33,27 +33,7 @@ public class LinkedList<K extends Comparable<K>> {
 
 		}
 	}
-	public void addSort(INode<K> newNode) {
-		INode<K> node1 = head;
-		INode<K> node2 = null;
-		while(node1 != null && newNode.getKey().compareTo(node1.getKey()) > 0) {
-			node2 = node1;
-			node1 = node1.getNext();
-		}
-		if(node2 == null) {
-			this.head = newNode;
-		}else {
-			node2.setNext(newNode);
-		}
-		newNode.setNext(node1);
-		while(node1 != null) {
-			this.tail = node1;
-			node1 = node1.getNext();
-		}
-
-	}
-
-	public void insert(INode<K> preNode, INode newNode, INode nextNode) {
+	public void insert(INode<K> preNode, INode<K> newNode, INode<K> nextNode) {
 		preNode.setNext(newNode);
 		newNode.setNext(nextNode);
 	}
@@ -122,4 +102,4 @@ public class LinkedList<K extends Comparable<K>> {
 		System.out.println(myNodes);
 	}
 
-} 
+}
