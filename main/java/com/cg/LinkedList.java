@@ -89,7 +89,7 @@ public class LinkedList<K> {
 	}
 
 	public void print() {
-		System.out.println("Printing LinkedList");
+		System.out.println("Printing :");
 		StringBuffer myNodes = new StringBuffer();
 		INode<K> tempNode = head;
 		while (tempNode.getNext() != null) {
