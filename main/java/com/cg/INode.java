@@ -1,6 +1,6 @@
 package com.cg;
 
-public interface INode<K extends Comparable<K>> {
+public interface INode<K> {
 	  K getKey();
 	  void setKey(K key);
 
